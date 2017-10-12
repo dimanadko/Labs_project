@@ -29,7 +29,7 @@ function InfWord (word){
   let char_arr = word.split('');
   let i;
   for (i of char_arr) {
-    if (frequancy[i] === true){
+    if (frequancy[i]){
       frequancy[i] +=1;
     } else {
       frequancy[i] = 1;
@@ -37,4 +37,4 @@ function InfWord (word){
   }
   console.log(frequancy);
 };
-InfWord('splits');
+InfWord('sssplits');
