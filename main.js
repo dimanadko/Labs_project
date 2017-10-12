@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 let clothes = [
   'jeans','t-shirt','blue jacket','trousers', 'pans',
@@ -12,9 +12,29 @@ function DoubleWord(word) {
     return word;
   }
 };
-/*function PlainSort(array){
-  array.map
-};*/
-    //let new_item = item.split(' ').length;
-    //console.log(new_item);
 let complicated_clothes = clothes.map(DoubleWord);
+let sorted_clothes = clothes.sort();
+console.log(sorted_clothes);
+
+/*class InfWord {
+  constructor(frequancy, diftong){
+    this.frequancy = frequancy;
+    this.diftong = diftong;
+  };
+};*/
+
+
+function InfWord (word){
+  const frequancy = {};
+  let char_arr = word.split('');
+  let i;
+  for (i of char_arr) {
+    if (frequancy[i] === true){
+      frequancy[i] +=1;
+    } else {
+      frequancy[i] = 1;
+    };
+  }
+  console.log(frequancy);
+};
+InfWord('splits');
